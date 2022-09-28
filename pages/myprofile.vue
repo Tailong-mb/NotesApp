@@ -1,5 +1,5 @@
 <template>
   <div>
-    <NuxtWelcome />
+    <h1>Notes App Profile</h1>
   </div>
 </template>
