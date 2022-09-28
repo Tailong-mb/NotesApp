@@ -1,13 +1,15 @@
 {
   "private": true,
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
-    "nuxt": "3.0.0-rc.11"
+    "nuxt3": "latest"
+  },
+  "dependencies": {
+    "@nuxt/ui": "^0.0.0-alpha.5",
+    "@supabase/supabase-js": "^1.34.1"
   }
 }
