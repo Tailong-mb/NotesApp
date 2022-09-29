@@ -1,11 +1,8 @@
-import useSupabase from "./useSupabase";
-
 const useAuth = () => {
   const user = useState("user", () => null);
   const { supabase } = useSupabase();
 
   supabase.auth.onAuthStateChange((e, session) => {
-    //@ts-ignore
     user.value = session?.user || null;
   });
 
@@ -39,7 +36,6 @@ const useAuth = () => {
   };
 
   const isLoggedIn = () => {
-    //@ts-ignore
     return !!user.value;
   };
 
@@ -53,6 +49,3 @@ const useAuth = () => {
 };
 
 export default useAuth;
-function useState(arg0: string, arg1: () => any) {
-  throw new Error("Function not implemented.");
-}
